@@ -12,23 +12,4 @@ first row every lamp represents 5 minutes. In this first row the 3rd, 6th and 9t
 quarter, half and last quarter of an hour. The other lamps are yellow. In the last row with 4 lamps every lamp
 represents 1 minute.
 
-One can be seen [here](http://uniqueclocks.co.uk/media/berlin~clock.jpg~1.gif)
-
-## The brief
-
-We have created a number of acceptance tests for the Berlin Clock and your challenge is to get them passing.
-
-## Some hints
-ensure that your machine has visual studio (we used 2013), and the following 2 extensions: 1) Nuget 2) 'specflow for visual studio 2013' (or appropriate). These can be installed under menu tools, Extensions and updates.	
-
-The exercise contains an un-implemented Specflow BDD test (see http://www.specflow.org/getting-started/). The use of BDD in this instance is to provide you with our definition of done for the task.
-
-Please ensure that you are familiar with our values in the instructions project.  They are important to us.
-
-* simple, elegant code that reads like a narrative
-* thinking about the code more than the writing of the code (we spend a lot of time thinking/debating about what we are writing)
-* transparency and feedback to support continuous learning
-* excellent testing that acts as documentation for the code
-* challenging boundaries where necessary
-
-
+One can be seen [here](https://en.wikipedia.org/wiki/Mengenlehreuhr)

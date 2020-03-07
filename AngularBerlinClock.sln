@@ -3,7 +3,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.29519.181
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BerlinClockAPI", "BerlinClockAPI\BerlinClockAPI.csproj", "{F124627E-BEA7-4DED-A2FA-1EFBEA85400E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BerlinClockAPI", "BerlinClockAPI\BerlinClockAPI.csproj", "{F124627E-BEA7-4DED-A2FA-1EFBEA85400E}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{59760739-1CD7-41FE-B2BD-2567B303E393}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BerlinClockAPI.UnitTests", "Tests\BerlinClockAPI.UnitTests\BerlinClockAPI.UnitTests.csproj", "{C2ACFB49-D390-49B8-94AA-D73107C6658D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BerlinClockAPI.AcceptanceTests", "Tests\BerlinClockAPI.AcceptanceTests\BerlinClockAPI.AcceptanceTests.csproj", "{2ABC0651-4A88-4317-9253-D0C8F5644BAD}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,9 +21,21 @@ Global
 		{F124627E-BEA7-4DED-A2FA-1EFBEA85400E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F124627E-BEA7-4DED-A2FA-1EFBEA85400E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F124627E-BEA7-4DED-A2FA-1EFBEA85400E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C2ACFB49-D390-49B8-94AA-D73107C6658D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C2ACFB49-D390-49B8-94AA-D73107C6658D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C2ACFB49-D390-49B8-94AA-D73107C6658D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C2ACFB49-D390-49B8-94AA-D73107C6658D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2ABC0651-4A88-4317-9253-D0C8F5644BAD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2ABC0651-4A88-4317-9253-D0C8F5644BAD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2ABC0651-4A88-4317-9253-D0C8F5644BAD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2ABC0651-4A88-4317-9253-D0C8F5644BAD}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{C2ACFB49-D390-49B8-94AA-D73107C6658D} = {59760739-1CD7-41FE-B2BD-2567B303E393}
+		{2ABC0651-4A88-4317-9253-D0C8F5644BAD} = {59760739-1CD7-41FE-B2BD-2567B303E393}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {49739C22-3C0D-4B37-8C8E-E3990F09878D}

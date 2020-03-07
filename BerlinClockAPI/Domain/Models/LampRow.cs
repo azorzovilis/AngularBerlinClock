@@ -1,7 +1,7 @@
-﻿using System.Linq;
-
-namespace BerlinClockAPI.Domain.Models
+﻿namespace BerlinClockAPI.Domain.Models
 {
+    using System.Linq;
+
     public class LampRow
     {
         //Create empty row

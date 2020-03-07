@@ -14,26 +14,29 @@
 
             return new Clock
             {
-                TopSecondsRow = GenerateLine(parts.Seconds, new LampRow(numberOfLamps: 1), new TopSecondsRowRule()),
-                TopHoursRow = GenerateLine(parts.Hours, new LampRow(numberOfLamps: 4), new TopHoursRule()),
-                BottomHoursRow = GenerateLine(parts.Hours, new LampRow(numberOfLamps: 4), new BottomHoursRule()),
-                TopMinutesRow = GenerateLine(parts.Minutes, new LampRow(numberOfLamps: 11), new TopMinutesRule()),
-                BottomMinutesRow = GenerateLine(parts.Minutes, new LampRow(numberOfLamps: 4), new BottomMinutesRule())
+                LampRows = new LampRow[]
+                {
+                    GenerateLine(parts.Seconds, new LampRow(numberOfLamps: 1), new TopSecondsRowRowRule()),
+                    GenerateLine(parts.Hours, new LampRow(numberOfLamps: 4), new TopHoursRowRule()),
+                    GenerateLine(parts.Hours, new LampRow(numberOfLamps: 4), new BottomHoursRowRule()),
+                    GenerateLine(parts.Minutes, new LampRow(numberOfLamps: 11), new TopMinutesRowRule()),
+                    GenerateLine(parts.Minutes, new LampRow(numberOfLamps: 4), new BottomMinutesRowRule())
+                }
             };
         }
 
-        private LampRow GenerateLine(int timeUnit, LampRow lampRow, IRule rule)
+        private LampRow GenerateLine(int timeUnit, LampRow lampRow, IRowRule rowRule)
         {
             for (int index = 0; index < lampRow.Lamps.Length; index++)
             {
-                var lightColour = rule.LampRule(timeUnit, index);
+                var lightColour = rowRule.Rule(timeUnit, index);
                 lampRow.Lamps[index] = new Lamp(lightColour);
             }
             return lampRow;
         }
 
         // 24:00:00 is an exception since TimeSpan cannot represent this value
-        private dynamic GetTimeParts(TimeSpan time)
+        private static dynamic GetTimeParts(TimeSpan time)
         {
             return time.Days == 1
                 ? new { Hours = 24, time.Minutes, time.Seconds }

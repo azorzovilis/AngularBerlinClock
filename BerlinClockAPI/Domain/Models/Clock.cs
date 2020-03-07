@@ -1,34 +1,28 @@
-﻿using System.Text;
-using BerlinClockAPI.Domain.Interfaces;
-
-namespace BerlinClockAPI.Domain.Models
+﻿namespace BerlinClockAPI.Domain.Models
 {
+    using Interfaces;
+    using System.Text;
+
     internal class Clock : IClock
     {
+        private const int NUMBER_OF_ROWS = 5;
+
         internal Clock()
         {
-            TopSecondsRow = new LampRow();
-            TopMinutesRow = new LampRow();
-            BottomMinutesRow = new LampRow();
-            TopHoursRow = new LampRow();
-            BottomHoursRow = new LampRow();
+            LampRows = new LampRow[NUMBER_OF_ROWS];
         }
 
-        public LampRow TopSecondsRow { get; set; }
-        public LampRow TopMinutesRow { get; set; }
-        public LampRow BottomMinutesRow { get; set; }
-        public LampRow TopHoursRow { get; set; }
-        public LampRow BottomHoursRow { get; set; }
+        public LampRow[] LampRows { get; set; }
 
         public override string ToString()
         {
             var sb = new StringBuilder();
 
-            sb.AppendLine(string.Join(string.Empty, TopSecondsRow.ToString()));
-            sb.AppendLine(string.Join(string.Empty, TopHoursRow.ToString()));
-            sb.AppendLine(string.Join(string.Empty, BottomHoursRow.ToString()));
-            sb.AppendLine(string.Join(string.Empty, TopMinutesRow.ToString()));
-            sb.Append(string.Join(string.Empty, BottomMinutesRow.ToString()));
+            sb.AppendLine(string.Join(string.Empty, LampRows[0].ToString()));
+            sb.AppendLine(string.Join(string.Empty, LampRows[1].ToString()));
+            sb.AppendLine(string.Join(string.Empty, LampRows[2].ToString()));
+            sb.AppendLine(string.Join(string.Empty, LampRows[3].ToString()));
+            sb.Append(string.Join(string.Empty, LampRows[4].ToString()));
 
             return sb.ToString();
         }
