@@ -5,9 +5,12 @@
 
     internal class TopMinutesRowRule : IRowRule
     {
-        public Func<int, int, LampLight> Rule => (minutes, index) => 
+        private readonly Func<int, bool> _isThirdLamp = i => i == (3 - 1) || i == (6 - 1) || i == (9 - 1);
+
+        public Func<int, int, Lamp> Rule => 
+            (minutes, index) => 
             minutes / (5 * (index + 1)) >= 1 
-                ? ((index == (3 - 1) || index == (6 - 1) || index == (9 - 1)) ? LampLight.Red : LampLight.Yellow) 
-                : LampLight.Off;
+                ? _isThirdLamp(index) ? new Lamp(LampLight.Red, true) : new Lamp(LampLight.Yellow, true) 
+                : _isThirdLamp(index) ? new Lamp(LampLight.Red, false) : new Lamp(LampLight.Yellow, false);
     }
 }

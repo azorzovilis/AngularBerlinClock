@@ -5,6 +5,10 @@
 
     internal class BottomMinutesRowRule : IRowRule
     {
-        public Func<int, int, LampLight> Rule => (minutes, index) => (index + 1) <= minutes % 5 ? LampLight.Yellow : LampLight.Off;
+        public Func<int, int, Lamp> Rule => 
+            (minutes, index) => 
+                index + 1 <= minutes % 5
+                    ? new Lamp(LampLight.Yellow, true)
+                    : new Lamp(LampLight.Yellow, false);
     }
 }

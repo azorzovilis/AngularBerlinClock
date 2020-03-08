@@ -43,7 +43,8 @@
             var result = _itemUnderTest.Rule(hours, lampIndex);
 
             // Assert
-            Assert.AreEqual(LampLight.Off, result);
+            Assert.IsFalse(result.IsSwitchedOn);
+            Assert.AreEqual(LampLight.Off, result.Light);
         }
 
         [Test]
@@ -103,7 +104,7 @@
             var result = _itemUnderTest.Rule(hours, lampIndex);
 
             // Assert
-            Assert.AreEqual(LampLight.Red, result);
+            Assert.AreEqual(LampLight.Red, result.Light);
         }
     }
 }

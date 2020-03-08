@@ -5,6 +5,10 @@
 
     internal class TopSecondsRowRowRule : IRowRule
     {
-        public Func<int, int, LampLight> Rule => (seconds, index) => seconds % 2 == 0 ? LampLight.Yellow : LampLight.Off;
+        public Func<int, int, Lamp> Rule => 
+            (seconds, index) => 
+                seconds % 2 == 0
+                    ? new Lamp(LampLight.Yellow, true)
+                    : new Lamp(LampLight.Yellow, false);
     }
 }

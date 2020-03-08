@@ -8,6 +8,6 @@ namespace BerlinClockAPI.Domain.Interfaces
 
     internal interface IRowRule
     {
-        Func<int, int, LampLight> Rule { get; }
+        Func<int, int, Lamp> Rule { get; }
     }
 }
