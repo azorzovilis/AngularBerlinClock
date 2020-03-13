@@ -9,24 +9,112 @@ import { Component } from '@angular/core';
         Welcome to {{title}}!
       </h1>
       <span style="display: block">{{ title }} app is running!</span>
-      <img width="300" alt="Angular Logo" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTAgMjUwIj4KICAgIDxwYXRoIGZpbGw9IiNERDAwMzEiIGQ9Ik0xMjUgMzBMMzEuOSA2My4ybDE0LjIgMTIzLjFMMTI1IDIzMGw3OC45LTQzLjcgMTQuMi0xMjMuMXoiIC8+CiAgICA8cGF0aCBmaWxsPSIjQzMwMDJGIiBkPSJNMTI1IDMwdjIyLjItLjFWMjMwbDc4LjktNDMuNyAxNC4yLTEyMy4xTDEyNSAzMHoiIC8+CiAgICA8cGF0aCAgZmlsbD0iI0ZGRkZGRiIgZD0iTTEyNSA1Mi4xTDY2LjggMTgyLjZoMjEuN2wxMS43LTI5LjJoNDkuNGwxMS43IDI5LjJIMTgzTDEyNSA1Mi4xem0xNyA4My4zaC0zNGwxNy00MC45IDE3IDQwLjl6IiAvPgogIDwvc3ZnPg==">
     </div>
-    <h2>Here are some links to help you start: </h2>
-    <ul>
-      <li>
-        <h2><a target="_blank" rel="noopener" href="https://angular.io/tutorial">Tour of Heroes</a></h2>
-      </li>
-      <li>
-        <h2><a target="_blank" rel="noopener" href="https://angular.io/cli">CLI Documentation</a></h2>
-      </li>
-      <li>
-        <h2><a target="_blank" rel="noopener" href="https://blog.angular.io/">Angular blog</a></h2>
-      </li>
-    </ul>
+
+    <div class="outer-container">
+
+      <div class="outer circle">
+        <div class="inner circle yellow">&nbsp;</div>
+  </div>
+
+      <div class="container">
+        <div class="box1 red"></div>
+        <div class="box2 red"></div>
+        <div class="box3 switched-off-red"></div>
+        <div class="box-last switched-off-red"></div>
+      </div>
+
+      <div class="container">
+        <div class="box1 red"></div>
+        <div class="box2 red"></div>
+        <div class="box3 switched-off-red"></div>
+        <div class="box-last switched-off-red"></div>
+      </div>
+  
+      <div class="container">
+        <div class="box1 yellow"></div>
+        <div class="box2 yellow"></div>
+        <div class="box3 red"></div>
+        <div class="box4 yellow"></div>
+        <div class="box5 yellow"></div>
+        <div class="box6 red"></div>
+        <div class="box7 switched-off-yellow"></div>
+        <div class="box8 switched-off-yellow"></div>
+        <div class="box9 switched-off-red"></div>
+        <div class="box10 switched-off-yellow"></div>
+        <div class="box-last switched-off-yellow"></div>
+      </div>
+
+      <div class="container">
+        <div class="box1 yellow"></div>
+        <div class="box2 switched-off-yellow"></div>
+        <div class="box3 switched-off-yellow"></div>
+        <div class="box-last switched-off-yellow"></div>
+      </div>
+    </div>
     
   `,
-  styles: []
+  styles: [`
+    .outer-container {
+      width: 623px;
+      margin: 0 auto;
+    }
+
+    .container {
+      width:431px;
+      height:68px; 
+      background-color: #edf1f1; 
+      padding: 10px 11px 7px;
+      border-radius: 23px;
+      margin: 0 auto;
+      display: flex;
+      margin-bottom: 4px;
+    }
+
+    .circle { border-radius: 50%; }
+
+    .outer {
+      background-color:#edf1f1;
+      width:150px;
+      height:150px;
+      position:relative;
+      margin: 0 auto;
+      margin-bottom: 4px;
+    }
+
+    .inner {
+      top: 7%; left:8%;
+      width:85%;
+      height:85%;
+      position: relative;
+    }
+
+    .container div{
+      width: 23%;
+      height:65px;
+    }
+
+    .box1{
+      border-top-left-radius: 26px 20px;
+      border-bottom-left-radius: 26px 20px;
+    }
+
+    .box1, .box2, .box3, .box4, .box5, .box6, .box7, .box8, .box9, .box10 {
+      margin-right:13px;
+    }
+
+    .box-last{
+      border-top-right-radius: 26px 20px;
+      border-bottom-right-radius: 26px 20px;
+    }
+
+    .red { background-color: #f56475; }
+    .switched-off-red { background-color: #97616f; }
+    .yellow { background-color: #fef900; }
+    .switched-off-yellow { background-color: #d4a259; }
+  `]
 })
+
 export class AppComponent {
   title = 'BerlinClockClient';
 }
