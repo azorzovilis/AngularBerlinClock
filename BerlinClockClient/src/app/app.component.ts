@@ -15,40 +15,40 @@ import { Component } from '@angular/core';
 
       <div class="outer circle">
         <div class="inner circle yellow">&nbsp;</div>
-  </div>
+      </div>
 
       <div class="container">
-        <div class="box1 red"></div>
-        <div class="box2 red"></div>
-        <div class="box3 switched-off-red"></div>
+        <div class="box box-first red"></div>
+        <div class="box red"></div>
+        <div class="box switched-off-red"></div>
         <div class="box-last switched-off-red"></div>
       </div>
 
       <div class="container">
-        <div class="box1 red"></div>
-        <div class="box2 red"></div>
-        <div class="box3 switched-off-red"></div>
+        <div class="box box-first red"></div>
+        <div class="box red"></div>
+        <div class="box switched-off-red"></div>
         <div class="box-last switched-off-red"></div>
       </div>
   
       <div class="container">
-        <div class="box1 yellow"></div>
-        <div class="box2 yellow"></div>
-        <div class="box3 red"></div>
-        <div class="box4 yellow"></div>
-        <div class="box5 yellow"></div>
-        <div class="box6 red"></div>
-        <div class="box7 switched-off-yellow"></div>
-        <div class="box8 switched-off-yellow"></div>
-        <div class="box9 switched-off-red"></div>
-        <div class="box10 switched-off-yellow"></div>
+        <div class="box box-first yellow"></div>
+        <div class="box yellow"></div>
+        <div class="box red"></div>
+        <div class="box yellow"></div>
+        <div class="box yellow"></div>
+        <div class="box red"></div>
+        <div class="box switched-off-yellow"></div>
+        <div class="box switched-off-yellow"></div>
+        <div class="box switched-off-red"></div>
+        <div class="box switched-off-yellow"></div>
         <div class="box-last switched-off-yellow"></div>
       </div>
 
       <div class="container">
-        <div class="box1 yellow"></div>
-        <div class="box2 switched-off-yellow"></div>
-        <div class="box3 switched-off-yellow"></div>
+        <div class="box box-first yellow"></div>
+        <div class="box switched-off-yellow"></div>
+        <div class="box switched-off-yellow"></div>
         <div class="box-last switched-off-yellow"></div>
       </div>
     </div>
@@ -94,13 +94,13 @@ import { Component } from '@angular/core';
       height:65px;
     }
 
-    .box1{
-      border-top-left-radius: 26px 20px;
-      border-bottom-left-radius: 26px 20px;
+    .box{
+      margin-right:13px;
     }
 
-    .box1, .box2, .box3, .box4, .box5, .box6, .box7, .box8, .box9, .box10 {
-      margin-right:13px;
+    .box-first{
+      border-top-left-radius: 26px 20px;
+      border-bottom-left-radius: 26px 20px;
     }
 
     .box-last{
