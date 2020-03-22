@@ -6,6 +6,7 @@ using Microsoft.Extensions.Hosting;
 
 namespace BerlinClockAPI
 {
+    using Microsoft.OpenApi.Models;
     using Services;
     using Services.Interfaces;
 
@@ -23,6 +24,11 @@ namespace BerlinClockAPI
         {
             services.AddControllers();
 
+            services.AddSwaggerGen(c =>
+            {
+                c.SwaggerDoc("v1", new OpenApiInfo { Title = "Berlin Clock", Version = "v1" });
+            });
+
             services.AddScoped<IBerlinClockContext, BerlinClockContext>();
             services.AddScoped<IBerlinClockFactory, BerlinClockFactory>();
             services.AddScoped<ITimeConverter, TimeConverter>();
@@ -36,6 +42,16 @@ namespace BerlinClockAPI
             {
                 app.UseDeveloperExceptionPage();
             }
+
+            // Enable middleware to serve generated Swagger as a JSON endpoint.
+            app.UseSwagger();
+
+            // Enable middleware to serve swagger-ui (HTML, JS, CSS, etc.),
+            // specifying the Swagger JSON endpoint.
+            app.UseSwaggerUI(c =>
+            {
+                c.SwaggerEndpoint("/swagger/v1/swagger.json", "Berlin Clock V1");
+            });
 
             app.UseHttpsRedirection();
 
