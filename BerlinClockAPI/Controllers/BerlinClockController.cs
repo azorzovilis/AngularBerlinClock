@@ -20,15 +20,37 @@
         }
 
         [HttpGet]
-        public IClock Get(string time)
+        public IClock Get([FromQuery] string time)
         {
             try
             {
+                if (time == null)
+                {
+                    time = DateTime.UtcNow.ToString("HH:mm:ss");
+                }
+
                 return _timeConverter.ConvertTimeToBerlinClock(time);
             }
             catch (Exception e)
             {
                 _logger.LogError(e, "Time conversion failed", time);
+                throw;
+            }
+        }
+
+        [HttpGet]
+        [Route("internal-clock")]
+        public string Get()
+        {
+            try
+            {
+                var time = DateTime.UtcNow.ToString("HH:mm:ss");
+
+                return _timeConverter.ConvertTime(time);
+            }
+            catch (Exception e)
+            {
+                _logger.LogError(e, "Time conversion failed");
                 throw;
             }
         }

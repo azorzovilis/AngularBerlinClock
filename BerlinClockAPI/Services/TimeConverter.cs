@@ -34,7 +34,7 @@
             return _berlinClockContext.GetBerlinClock();
         }
 
-        private TimeSpan ParseGivenTime(string time)
+        private static TimeSpan ParseGivenTime(string time)
         {
             var timeArray = time.Split(':').Select(int.Parse).ToArray();
             return new TimeSpan(timeArray[0], timeArray[1], timeArray[2]);
