@@ -14,7 +14,7 @@
 
             return new Clock
             {
-                LampRows = new LampRow[]
+                BerlinClock = new LampRow[]
                 {
                     GenerateLine(parts.Seconds, new LampRow(numberOfLamps: 1), new TopSecondsRowRowRule()),
                     GenerateLine(parts.Hours, new LampRow(numberOfLamps: 4), new TopHoursRowRule()),
@@ -25,13 +25,13 @@
             };
         }
 
-        private LampRow GenerateLine(int timeUnit, LampRow lampRow, IRowRule rowRule)
+        private static LampRow GenerateLine(int timeUnit, LampRow lampRow, IRowRule rowRule)
         {
-            for (int index = 0; index < lampRow.Lamps.Length; index++)
+            for (var index = 0; index < lampRow.Lamps.Length; index++)
             {
-                var lightColour = rowRule.Rule(timeUnit, index);
-                lampRow.Lamps[index] = new Lamp(lightColour);
+                lampRow.Lamps[index] = rowRule.Rule(timeUnit, index);
             }
+
             return lampRow;
         }
 

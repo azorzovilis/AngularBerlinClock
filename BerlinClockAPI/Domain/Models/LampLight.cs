@@ -1,6 +1,6 @@
 ﻿namespace BerlinClockAPI.Domain.Models
 {
-    public enum LampLight
+    internal enum LampLight
     {
         Off = 'O',
         Red = 'R',

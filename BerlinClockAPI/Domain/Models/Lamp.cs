@@ -2,11 +2,27 @@
 {
     public class Lamp
     {
-        internal Lamp(LampLight light)
+        internal Lamp(LampLight colour, bool isSwitchedOn)
         {
-            Light = light;
+            Colour = ConvertLightToString(colour);
+            IsSwitchedOn = isSwitchedOn;
+            Light = isSwitchedOn ? colour : LampLight.Off;
         }
 
-        public LampLight Light { get; set; }
+        public string Colour { get; }
+
+        public bool IsSwitchedOn { get; }
+
+        internal LampLight Light { get; }
+
+        internal static string ConvertLightToString(LampLight light)
+        {
+            return light switch
+            {
+                LampLight.Red => "R",
+                LampLight.Yellow => "Y",
+                _ => "O"
+            };
+        }
     }
 }

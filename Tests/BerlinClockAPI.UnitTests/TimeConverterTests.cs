@@ -16,7 +16,7 @@
         private readonly ITimeValidator _timeValidator = Mock.Of<ITimeValidator>();
         private class FakeClock : IClock
         {
-            public LampRow[] LampRows { get; set; }
+            public LampRow[] BerlinClock { get; set; }
         }
 
         public TimeConverterTests()
