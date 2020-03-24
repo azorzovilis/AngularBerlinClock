@@ -1,40 +1,15 @@
 <div class="outer-container">
   <div class="outer circle">
-    <div [ngClass]="(berlinClock[0].lamps[0].light==89)?'yellow':'switched-off-yellow'" class="inner circle">&nbsp;</div>
+    <div [ngClass]="(berlinClock[0].lamps[0].colour==='Y')?'yellow':'switched-off-yellow'" class="inner circle">&nbsp;
+    </div>
   </div>
 
-  <div class="container">
-    <div [ngClass]="(berlinClock[1].lamps[0].light==82)?'red':'switched-off-red'" class="box box-first"></div>
-    <div [ngClass]="(berlinClock[1].lamps[1].light==82)?'red':'switched-off-red'" class="box"></div>
-    <div [ngClass]="(berlinClock[1].lamps[2].light==82)?'red':'switched-off-red'" class="box"></div>
-    <div [ngClass]="(berlinClock[1].lamps[3].light==82)?'red':'switched-off-red'" class="box-last"></div>
-  </div>
-  
-  <div class="container">
-    <div [ngClass]="(berlinClock[2].lamps[0].light==82)?'red':'switched-off-red'" class="box box-first"></div>
-    <div [ngClass]="(berlinClock[2].lamps[1].light==82)?'red':'switched-off-red'" class="box"></div>
-    <div [ngClass]="(berlinClock[2].lamps[2].light==82)?'red':'switched-off-red'" class="box"></div>
-    <div [ngClass]="(berlinClock[2].lamps[3].light==82)?'red':'switched-off-red'" class="box-last"></div>
-  </div>
+  <lamp-row [berlinClockLamps]=berlinClock[1].lamps></lamp-row>
 
-  <div class="container">
-    <div [ngClass]="(berlinClock[3].lamps[0].light==89)?'yellow':'switched-off-yellow'" class="box box-first"></div>
-    <div [ngClass]="(berlinClock[3].lamps[1].light==89)?'yellow':'switched-off-yellow'" class="box"></div>
-    <div [ngClass]="(berlinClock[3].lamps[2].light==82)?'red':'switched-off-red'" class="box"></div>
-    <div [ngClass]="(berlinClock[3].lamps[3].light==89)?'yellow':'switched-off-yellow'" class="box"></div>
-    <div [ngClass]="(berlinClock[3].lamps[4].light==89)?'yellow':'switched-off-yellow'" class="box"></div>
-    <div [ngClass]="(berlinClock[3].lamps[5].light==82)?'red':'switched-off-red'" class="box"></div>
-    <div [ngClass]="(berlinClock[3].lamps[6].light==89)?'yellow':'switched-off-yellow'" class="box"></div>
-    <div [ngClass]="(berlinClock[3].lamps[7].light==89)?'yellow':'switched-off-yellow'" class="box"></div>
-    <div [ngClass]="(berlinClock[3].lamps[8].light==82)?'red':'switched-off-red'" class="box"></div>
-    <div [ngClass]="(berlinClock[3].lamps[9].light==89)?'yellow':'switched-off-yellow'" class="box"></div>
-    <div [ngClass]="(berlinClock[3].lamps[10].light==89)?'yellow':'switched-off-yellow'" class="box-last"></div>
-  </div>
+  <lamp-row [berlinClockLamps]=berlinClock[2].lamps></lamp-row>
 
-  <div class="container">
-    <div [ngClass]="(berlinClock[4].lamps[0].light==89)?'yellow':'switched-off-yellow'" class="box box-first"></div>
-    <div [ngClass]="(berlinClock[4].lamps[1].light==89)?'yellow':'switched-off-yellow'" class="box"></div>
-    <div [ngClass]="(berlinClock[4].lamps[2].light==89)?'yellow':'switched-off-yellow'" class="box"></div>
-    <div [ngClass]="(berlinClock[4].lamps[3].light==89)?'yellow':'switched-off-yellow'" class="box-last"></div>
-  </div>
+  <lamp-row [berlinClockLamps]=berlinClock[3].lamps></lamp-row>
+
+  <lamp-row [berlinClockLamps]=berlinClock[4].lamps></lamp-row>
+
 </div>

@@ -1,0 +1,5 @@
+<div class="container">
+    <div *ngFor="let lamp of berlinClockLamps; first as isFirst; last as isLast" [ngClass]="lamp.lampStyle"
+        [class.box-first]="isFirst" [class.box-last]="isLast">
+    </div>
+</div>
