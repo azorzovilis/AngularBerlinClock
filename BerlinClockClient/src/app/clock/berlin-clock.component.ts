@@ -8,6 +8,7 @@ import { Lamp } from '../models/lamp';
 })
 
 export class BerlinClockComponent implements OnInit {
+  
   constructor() { }; // TODO: inject service here
 
   public berlinClock: { "lamps": Lamp[] }[] = [];
@@ -23,5 +24,6 @@ export class BerlinClockComponent implements OnInit {
     // })
 
     this.berlinClock = [{ "lamps": [{ "colour": "Y", "isSwitchedOn": false }] }, { "lamps": [{ "colour": "R", "isSwitchedOn": true }, { "colour": "R", "isSwitchedOn": true }, { "colour": "Y", "isSwitchedOn": false }, { "colour": "R", "isSwitchedOn": true }] }, { "lamps": [{ "colour": "R", "isSwitchedOn": true }, { "colour": "Y", "isSwitchedOn": true }, { "colour": "R", "isSwitchedOn": false }, { "colour": "R", "isSwitchedOn": false }] }, { "lamps": [{ "colour": "Y", "isSwitchedOn": true }, { "colour": "Y", "isSwitchedOn": true }, { "colour": "R", "isSwitchedOn": true }, { "colour": "Y", "isSwitchedOn": true }, { "colour": "Y", "isSwitchedOn": true }, { "colour": "R", "isSwitchedOn": false }, { "colour": "Y", "isSwitchedOn": false }, { "colour": "Y", "isSwitchedOn": false }, { "colour": "R", "isSwitchedOn": false }, { "colour": "Y", "isSwitchedOn": false }, { "colour": "Y", "isSwitchedOn": false }] }, { "lamps": [{ "colour": "Y", "isSwitchedOn": true }, { "colour": "Y", "isSwitchedOn": true }, { "colour": "Y", "isSwitchedOn": false }, { "colour": "Y", "isSwitchedOn": false }] }];
+
   }
 }
