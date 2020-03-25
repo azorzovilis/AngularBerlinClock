@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { Lamp } from '../models/lamp';
+import { BerlinClockService } from '../services/berlin-clock.service';
+import { BerlinClock } from '../models/berlin-clock';
 
 @Component({
   selector: 'berlin-clock',
@@ -8,22 +9,14 @@ import { Lamp } from '../models/lamp';
 })
 
 export class BerlinClockComponent implements OnInit {
-  
-  constructor() { }; // TODO: inject service here
+  constructor(private berlinClockService: BerlinClockService) { };
 
-  public berlinClock: { "lamps": Lamp[] }[] = [];
+  public berlinClock: BerlinClock;
 
   ngOnInit(): void {
-
-    //TODO
-    // this.berlinClockService.getTime()
-    // .subscribe(success=>{
-    //   if (success) {
-    //     this.berlinClock = this.berlinClockService.berlinClock;
-    //   }
-    // })
-
-    this.berlinClock = [{ "lamps": [{ "colour": "Y", "isSwitchedOn": false }] }, { "lamps": [{ "colour": "R", "isSwitchedOn": true }, { "colour": "R", "isSwitchedOn": true }, { "colour": "Y", "isSwitchedOn": false }, { "colour": "R", "isSwitchedOn": true }] }, { "lamps": [{ "colour": "R", "isSwitchedOn": true }, { "colour": "Y", "isSwitchedOn": true }, { "colour": "R", "isSwitchedOn": false }, { "colour": "R", "isSwitchedOn": false }] }, { "lamps": [{ "colour": "Y", "isSwitchedOn": true }, { "colour": "Y", "isSwitchedOn": true }, { "colour": "R", "isSwitchedOn": true }, { "colour": "Y", "isSwitchedOn": true }, { "colour": "Y", "isSwitchedOn": true }, { "colour": "R", "isSwitchedOn": false }, { "colour": "Y", "isSwitchedOn": false }, { "colour": "Y", "isSwitchedOn": false }, { "colour": "R", "isSwitchedOn": false }, { "colour": "Y", "isSwitchedOn": false }, { "colour": "Y", "isSwitchedOn": false }] }, { "lamps": [{ "colour": "Y", "isSwitchedOn": true }, { "colour": "Y", "isSwitchedOn": true }, { "colour": "Y", "isSwitchedOn": false }, { "colour": "Y", "isSwitchedOn": false }] }];
-
+    this.berlinClockService.getBerlinClock()
+      .subscribe(data => {
+        this.berlinClock = data;
+      });
   }
 }

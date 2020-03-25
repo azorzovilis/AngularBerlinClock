@@ -3,3 +3,7 @@ export interface Lamp {
     isSwitchedOn: boolean;
     lampStyle? : string;
 }
+
+export interface LampRow {
+    lamps: Lamp[];
+}
