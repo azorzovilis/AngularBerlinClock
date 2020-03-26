@@ -17,6 +17,7 @@
         private class FakeClock : IClock
         {
             public LampRow[] LampRows { get; set; }
+            public string UtcTime { get; set; }
         }
 
         public TimeConverterTests()

@@ -21,7 +21,8 @@
                     GenerateLine(parts.Hours, new LampRow(numberOfLamps: 4), new BottomHoursRowRule()),
                     GenerateLine(parts.Minutes, new LampRow(numberOfLamps: 11), new TopMinutesRowRule()),
                     GenerateLine(parts.Minutes, new LampRow(numberOfLamps: 4), new BottomMinutesRowRule())
-                }
+                },
+                UtcTime = time.ToString("hh\\:mm\\:ss")
             };
         }
 

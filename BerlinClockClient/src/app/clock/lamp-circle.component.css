@@ -1,0 +1,28 @@
+.circle {
+  border-radius: 50%;
+}
+
+.outer {
+  background-color: #edf1f1;
+  width: 115px;
+  height: 115px;
+  position: relative;
+  margin: 0 auto;
+  margin-bottom: 4px;
+}
+
+.inner {
+  top: 9%;
+  left: 10%;
+  width: 80%;
+  height: 80%;
+  position: relative;
+}
+
+.yellow {
+  background-color: #fef900;
+}
+
+.switched-off-yellow {
+  background-color: #d4a259;
+}

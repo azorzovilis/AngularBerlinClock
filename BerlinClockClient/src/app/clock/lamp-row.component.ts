@@ -1,5 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
-import {Lamp} from '../models/lamp';
+import { Lamp } from '../models/lamp';
 
 @Component({
   selector: 'lamp-row',
@@ -8,31 +8,24 @@ import {Lamp} from '../models/lamp';
 })
 
 export class LampRowComponent implements OnInit {
+  @Input() lamps: Lamp[];
 
-  @Input() berlinClockLamps: Lamp[]  & {lampStyle : string};;
+  setStyle(lamp: Lamp): string {
+    let lampStyle: string = '';
 
-  constructor() { }
-
-  setStyle(lamp: Lamp) : string
-  {
-    let lampStyle: string;
-    if (lamp) {
-      if (lamp.colour === 'R') {
-        if (lamp.isSwitchedOn) { lampStyle = 'red'; }
-        else lampStyle = 'switched-off-red';
-      }
-
-      if (lamp.colour === 'Y') {
-        if (lamp.isSwitchedOn) { lampStyle = 'yellow'; }
-        else lampStyle = 'switched-off-yellow';
-      }
+    if (lamp.colour === 'R') {
+      lamp.isSwitchedOn ? lampStyle = 'red' : lampStyle = 'switched-off-red';
     }
-    
+
+    if (lamp.colour === 'Y') {
+      lamp.isSwitchedOn ? lampStyle = 'yellow' : lampStyle = 'switched-off-yellow';
+    }
+
     return 'box ' + lampStyle;
   }
 
   ngOnInit(): void {
-    this.berlinClockLamps.forEach(lamp => {
+    this.lamps.forEach(lamp => {
       lamp.lampStyle = this.setStyle(lamp);
     });
   }
