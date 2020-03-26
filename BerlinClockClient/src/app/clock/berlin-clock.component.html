@@ -1,0 +1,14 @@
+<div class="outer-container">
+  <div class="outer circle">
+    <div [ngClass]="(berlinClock.lampRows[0].lamps[0].isSwitchedOn)?'yellow':'switched-off-yellow'" class="inner circle">&nbsp;
+    </div>
+  </div>
+
+  <lamp-row [berlinClockLamps]=berlinClock.lampRows[1].lamps></lamp-row>
+
+  <lamp-row [berlinClockLamps]=berlinClock.lampRows[2].lamps></lamp-row>
+
+  <lamp-row [berlinClockLamps]=berlinClock.lampRows[3].lamps></lamp-row>
+
+  <lamp-row [berlinClockLamps]=berlinClock.lampRows[4].lamps></lamp-row>
+</div>
