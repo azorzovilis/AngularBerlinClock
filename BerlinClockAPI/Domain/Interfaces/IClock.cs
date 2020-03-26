@@ -4,6 +4,6 @@
 
     public interface IClock
     {
-        public LampRow[] BerlinClock { get; set; }
+        public LampRow[] LampRows { get; set; }
     }
 }
