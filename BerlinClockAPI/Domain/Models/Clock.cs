@@ -9,20 +9,20 @@
 
         internal Clock()
         {
-            BerlinClock = new LampRow[NUMBER_OF_ROWS];
+            LampRows = new LampRow[NUMBER_OF_ROWS];
         }
 
-        public LampRow[] BerlinClock { get; set; }
+        public LampRow[] LampRows { get; set; }
 
         public override string ToString()
         {
             var sb = new StringBuilder();
 
-            sb.AppendLine(string.Join(string.Empty, BerlinClock[0].ToString()));
-            sb.AppendLine(string.Join(string.Empty, BerlinClock[1].ToString()));
-            sb.AppendLine(string.Join(string.Empty, BerlinClock[2].ToString()));
-            sb.AppendLine(string.Join(string.Empty, BerlinClock[3].ToString()));
-            sb.Append(string.Join(string.Empty, BerlinClock[4].ToString()));
+            sb.AppendLine(string.Join(string.Empty, LampRows[0].ToString()));
+            sb.AppendLine(string.Join(string.Empty, LampRows[1].ToString()));
+            sb.AppendLine(string.Join(string.Empty, LampRows[2].ToString()));
+            sb.AppendLine(string.Join(string.Empty, LampRows[3].ToString()));
+            sb.Append(string.Join(string.Empty, LampRows[4].ToString()));
 
             return sb.ToString();
         }

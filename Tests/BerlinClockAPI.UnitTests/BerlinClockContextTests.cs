@@ -17,7 +17,7 @@
         private class FakeClock : IClock {
             internal FakeClock() { }
 
-            public LampRow[] BerlinClock { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
+            public LampRow[] LampRows { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
         }
 
         [Test]

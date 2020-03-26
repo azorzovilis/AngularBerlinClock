@@ -14,7 +14,7 @@
 
             return new Clock
             {
-                BerlinClock = new LampRow[]
+                LampRows = new LampRow[]
                 {
                     GenerateLine(parts.Seconds, new LampRow(numberOfLamps: 1), new TopSecondsRowRowRule()),
                     GenerateLine(parts.Hours, new LampRow(numberOfLamps: 4), new TopHoursRowRule()),
