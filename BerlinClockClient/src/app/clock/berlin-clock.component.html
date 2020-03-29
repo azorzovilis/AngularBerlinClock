@@ -1,14 +1,6 @@
-<div class="outer-container">
-  <div class="outer circle">
-    <div [ngClass]="(berlinClock.lampRows[0].lamps[0].isSwitchedOn)?'yellow':'switched-off-yellow'" class="inner circle">&nbsp;
-    </div>
-  </div>
+<div *ngIf="berlinClock">
+  <lamp-circle [lamp]=berlinClock.seconds.lamps[0]></lamp-circle>
+  <lamp-row *ngFor="let lampRow of berlinClock.minutesAndHours" [lamps]=lampRow.lamps></lamp-row>
 
-  <lamp-row [berlinClockLamps]=berlinClock.lampRows[1].lamps></lamp-row>
-
-  <lamp-row [berlinClockLamps]=berlinClock.lampRows[2].lamps></lamp-row>
-
-  <lamp-row [berlinClockLamps]=berlinClock.lampRows[3].lamps></lamp-row>
-
-  <lamp-row [berlinClockLamps]=berlinClock.lampRows[4].lamps></lamp-row>
+  <div class="time"><strong>{{berlinClock.utcTime}} UTC</strong></div>
 </div>

@@ -15,9 +15,8 @@
         private readonly IBerlinClockFactory _berlinClockFactory = Mock.Of<IBerlinClockFactory>();
 
         private class FakeClock : IClock {
-            internal FakeClock() { }
-
             public LampRow[] LampRows { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
+            public string UtcTime { get; set; }
         }
 
         [Test]

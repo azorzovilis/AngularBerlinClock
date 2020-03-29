@@ -32,6 +32,7 @@
 
             // Assert
             Assert.AreEqual(expectedClockStr, result.ToString());
+            Assert.AreEqual(aTime.ToString("hh\\:mm\\:ss"), result.UtcTime);
         }
 
         [Test]
@@ -51,6 +52,7 @@
 
             // Assert
             Assert.AreEqual(expectedClockStr, result.ToString());
+            Assert.AreEqual(aTime.ToString("hh\\:mm\\:ss"), result.UtcTime);
         }
 
         [Test]
@@ -70,6 +72,7 @@
 
             // Assert
             Assert.AreEqual(expectedClockStr, result.ToString());
+            Assert.AreEqual(aTime.ToString("hh\\:mm\\:ss"), result.UtcTime);
         }
     }
 }

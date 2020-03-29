@@ -34,11 +34,11 @@
             }
             catch (Exception e)
             {
-                _logger.LogError(e, "Time conversion failed", time);
+                _logger.LogError(e, "UtcTime conversion failed", time);
                 
-                return BadRequest($"Time conversion failed for '{time}'." 
+                return BadRequest($"UtcTime conversion failed for '{time}'." 
                                   + Environment.NewLine
-                                  + "Time should be supplied in HH:mm:ss format.");
+                                  + "UtcTime should be supplied in HH:mm:ss format.");
             }
         }
 
@@ -54,7 +54,7 @@
             }
             catch (Exception e)
             {
-                _logger.LogError(e, "Time conversion failed");
+                _logger.LogError(e, "UtcTime conversion failed");
 
                 return new StatusCodeResult(StatusCodes.Status500InternalServerError);
             }

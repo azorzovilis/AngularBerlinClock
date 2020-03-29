@@ -1,33 +1,5 @@
-.outer-container {
-  width: 623px;
-  margin: 0 auto;
-}
-
-.circle {
-  border-radius: 50%;
-}
-
-.outer {
-  background-color: #edf1f1;
-  width: 150px;
-  height: 150px;
-  position: relative;
-  margin: 0 auto;
-  margin-bottom: 4px;
-}
-
-.inner {
-  top: 7%;
-  left: 8%;
-  width: 85%;
-  height: 85%;
-  position: relative;
-}
-
-.yellow {
-  background-color: #fef900;
-}
-
-.switched-off-yellow {
-  background-color: #d4a259;
-}
+.time {
+    text-align: center;
+    padding-top: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+  }

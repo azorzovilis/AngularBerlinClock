@@ -4,6 +4,7 @@ import { HttpClientModule } from '@angular/common/http';
 
 import { AppComponent } from './app.component';
 import { BerlinClockComponent } from './clock/berlin-clock.component';
+import { LampCircleComponent } from './clock/lamp-circle.component';
 import { LampRowComponent } from './clock/lamp-row.component';
 import { BerlinClockService } from './services/berlin-clock.service';
 
@@ -11,6 +12,7 @@ import { BerlinClockService } from './services/berlin-clock.service';
   declarations: [
     AppComponent,
     BerlinClockComponent,
+    LampCircleComponent,
     LampRowComponent
   ],
   imports: [

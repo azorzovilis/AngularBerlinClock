@@ -12,6 +12,8 @@
             LampRows = new LampRow[NUMBER_OF_ROWS];
         }
 
+        public string UtcTime { get; set; }
+
         public LampRow[] LampRows { get; set; }
 
         public override string ToString()

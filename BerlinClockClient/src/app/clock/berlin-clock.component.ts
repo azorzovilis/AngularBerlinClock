@@ -14,9 +14,11 @@ export class BerlinClockComponent implements OnInit {
   public berlinClock: BerlinClock;
 
   ngOnInit(): void {
-    this.berlinClockService.getBerlinClock()
-      .subscribe(data => {
-        this.berlinClock = data;
-      });
+    setInterval(() => {
+      this.berlinClockService.getBerlinClock()
+        .subscribe(data => {
+          this.berlinClock = data;
+        });
+    }, 1000);
   }
 }
