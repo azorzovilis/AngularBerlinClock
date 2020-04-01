@@ -13,3 +13,20 @@ quarter, half and last quarter of an hour. The other lamps are yellow. In the la
 represents 1 minute.
 
 One can be seen [here](https://en.wikipedia.org/wiki/Mengenlehreuhr)
+
+## Running the app
+
+In order to view the clock you will need to have both the server and the client instances running.
+
+### Berlin Clock API
+In order to run the API, open the AngularBerlinClock.sln solution with Visual Studio 2019 or greater and simply run the BerlinClockAPI project.
+
+### BerlinClockClient
+
+You need to have Node.js and Angular CLI installed in order to run the app. 
+For more installation info check [here](https://angular.io/guide/setup-local)
+
+In order to view the client app, run `ng serve -o` for a dev server using a terminal under AngularBerlinClock/BerlinClockClient. 
+This will open `http://localhost:4200/`.
+
+![BerlinClock](https://user-images.githubusercontent.com/16823845/78191343-b418c180-746d-11ea-87cf-9599fc06e92b.PNG)
