@@ -1,5 +1,5 @@
 ﻿namespace BerlinClockAPI.Controllers
-{//testing
+{//testing 2
     using Domain.Interfaces;
     using Microsoft.AspNetCore.Http;
     using Microsoft.AspNetCore.Mvc;
