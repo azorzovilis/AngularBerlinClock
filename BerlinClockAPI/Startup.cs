@@ -53,7 +53,7 @@ namespace BerlinClockAPI
                 c.SwaggerEndpoint("/swagger/v1/swagger.json", "Berlin Clock V1");
             });
 
-            app.UseCors(builder => { builder.WithOrigins(Configuration["BerlinClientUri"]); });
+            //app.UseCors(builder => { builder.WithOrigins(Configuration["BerlinClientUri"]); });
 
             app.UseHttpsRedirection();
 
