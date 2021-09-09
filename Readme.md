@@ -26,7 +26,7 @@ In order to run the API, open the AngularBerlinClock.sln solution with Visual St
 You need to have Node.js and Angular CLI installed in order to run the app. 
 For more installation info check [here](https://angular.io/guide/setup-local)
 
-In order to view the client app, run `ng serve -o` for a dev server using a terminal under AngularBerlinClock/BerlinClockClient. 
+In order to view the client app open a terminal, cd to AngularBerlinClock/BerlinClockClient and run `ng serve -o` to start a dev server. 
 This will open `http://localhost:4200/`.
 
 ![BerlinClock](https://user-images.githubusercontent.com/16823845/78191343-b418c180-746d-11ea-87cf-9599fc06e92b.PNG)
